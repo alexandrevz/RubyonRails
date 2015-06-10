@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
   
 
+  get 'sessions/new'
+
   #get 'users/signup'
   
   get '/signup'  => 'users#signup' 
   resources :users
 
+  get '/login' => 'sessions#new'
   #get 'users/new'
 
   # get 'users/create'
